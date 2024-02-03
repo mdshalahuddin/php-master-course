@@ -82,11 +82,8 @@ $listings = [
 
                             <?= $job['location'] === "Sylhet" ? '<span class="text-xs text-white bg-blue-500 rounded-full py-1 px-2 mi-2">Local</span>' :'<span class="text-xs text-white bg-green-500 rounded-full py-1 px-2 mi-2">Local</span>'?>
                         </li>
-                        <?php if(!empty($job['tags'])):?>
-                        <li class="mb-2">
-                            <strong>Tags:</strong><?=implode(',',$job['tags'])?>
-                        </li>
-                        <?php endif;?>
+
+                        <?= (!empty($job['tags']))? '<li class="mb-2"><strong>Tags:</strong> '.implode(',',$job['tags']).'</li>':'' ?>
                     </ul>
                 </div>
             </div>
