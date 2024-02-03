@@ -39,7 +39,7 @@ $listings = [
         'description' => 'We are looking  for a friendly  to develop high-quality software solution.',
         'salary' => 15000,
         'location'=> 'Rajshahi',
-        'tags'=> ['Customer Support','Communication','Problem Solving']
+        'tags'=> []
     ],
 ]
 
@@ -85,11 +85,13 @@ $listings = [
                             <strong>Location:</strong><?=$job['location']?>
                             <?php if($job['location'] === "Sylhet"):?>
                             <span class="text-xs text-white bg-blue-500 rounded-full py-1 px-2 mi-2">Local</span>
-                            <?php endif?>
+                            <?php endif;?>
                         </li>
+                        <?php if(!empty($job['tags'])):?>
                         <li class="mb-2">
                             <strong>Tags:</strong><?=implode(',',$job['tags'])?>
                         </li>
+                        <?php endif;?>
                     </ul>
                 </div>
             </div>
