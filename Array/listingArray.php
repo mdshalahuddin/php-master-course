@@ -83,6 +83,9 @@ $listings = [
                         </li>
                         <li class="mb-2">
                             <strong>Location:</strong><?=$job['location']?>
+                            <?php if($job['location'] === "Sylhet"):?>
+                            <span class="text-xs text-white bg-blue-500 rounded-full py-1 px-2 mi-2">Local</span>
+                            <?php endif?>
                         </li>
                         <li class="mb-2">
                             <strong>Tags:</strong><?=implode(',',$job['tags'])?>
