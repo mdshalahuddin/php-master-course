@@ -64,10 +64,14 @@ $listings = [
         </div>
     </header>
     <div class="container mx-auto p-4 mt-4">
-        <?php foreach($listings as $job):?>
+        <?php foreach($listings as $index => $job):?>
 
         <div class="md my-4">
-            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+            <div class="<?php if($index % 2 == 0):?>
+                bg-blue-100
+                <?php else:?>
+                    bg-white-100
+                 <?php endif?> rounded-lg shadow-md p-6 mt-6">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold"><?=$job['title']?></h2>
                     <p class="text-gray-700 text-lg mt-2">
